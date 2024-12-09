@@ -4,7 +4,7 @@ html {
   padding: 0;
   font-family: "Mountains of Christmas", serif;
 }
-/* img */
+/* img -----------------------------------------------------*/
 #chrismas-tree{
   position:absolute;
   bottom: 10px;
@@ -13,7 +13,31 @@ html {
   height: 393.33px;
   z-index: -1;
 }
-
+/* Chrismas balls */
+.christmas-ball {
+  position: absolute;
+  width: 170px;
+  height: 144px;
+}
+#ball-top-left {
+  top: 0px;
+  left: 0px;
+}
+#ball-top-right {
+  top: 0px;
+  right: 0px;
+}
+#ball-bottom-left {
+  bottom:0px;
+  left: 0;
+}
+#ball-bottom-right {
+  bottom: 0px;
+  right: 0px;
+  z-index: -2;
+}
+/* /Chrismas balls */
+/* /img ----------------------------------------------------*/
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -23,6 +47,7 @@ html {
 }
 
 .header {
+  position: relative;
   background-color: #1cea0d;
   height: 167px;
   width: 100%;
