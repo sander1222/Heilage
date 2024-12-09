@@ -1,12 +1,14 @@
 body,
 html {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Mountains of Christmas", serif;
 }
+
 /* img */
-#chrismas-tree{
-  position:absolute;
+#chrismas-tree {
+  position: absolute;
   bottom: 10px;
   right: -400px;
   width: 488px;
@@ -49,8 +51,9 @@ main {
   background-color: beige;
   width: auto;
 }
-.left-side, .right-side {
-  background-color:azure;
+.left-side,
+.right-side {
+  background-color: azure;
   width: auto;
 }
 
@@ -72,7 +75,7 @@ main {
 .footer-left,
 .footer-right {
   position: relative;
-  width: 500px;
+  width: 400px;
   font-size: 20px;
   line-height: 1.5;
   padding: 0;
