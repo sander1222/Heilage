@@ -43,3 +43,8 @@ html {
 .footer-right p {
   margin: 0;
 }
+
+.Liste {
+  width: 10px;
+  height: 10px;
+}
