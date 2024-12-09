@@ -46,12 +46,16 @@ main {
   height: 100%;
 }
 .middle {
-  background-color: beige;
+  background-color: #44B33A;
   width: auto;
 }
 .left-side, .right-side {
-  background-color:azure;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: #F01313;
   width: auto;
+  padding: 20px 10px 10px 10px;
 }
 
 /* /main */
