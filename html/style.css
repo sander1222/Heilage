@@ -119,10 +119,24 @@ main {
 }
 /* /tittel */
 
+/* innhold */
 #innhold {
   /* background-color: #056700; */
-  grid-column: 2/3;
+  position: relative;
+  grid-column: 2/7;
 }
+#innhold-text {
+  resize: none;
+  position: absolute;
+  text-align: start;
+  margin: 0 0 0 10px;
+  width: 80%;
+  height: 200px;
+  border: solid 1px;
+  font-size: 20px;
+  overflow-y: auto;
+}
+/* /innhold */
 
 /* dato */
 #dato {

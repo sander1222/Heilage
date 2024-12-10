@@ -19,10 +19,18 @@ tittel.appendChild(tittelLabel);
 tittel.appendChild(tittelInput);
 // /Tittel .............................................
 
-
+// Innhold .............................................
 const innhold = document.createElement('div');
 innhold.id = 'innhold';
-innhold.textContent = 'Innhold';
+const innholdLabel = document.createElement('label');
+innholdLabel.setAttribute('for', 'innholdText');
+innholdLabel.textContent = 'Innhold:';
+const innholdText = document.createElement('textarea');
+innholdText.id = 'innhold-text';
+innholdText.name = 'innholdText';
+innhold.appendChild(innholdLabel);
+innhold.appendChild(innholdText);
+// /Innhold ............................................
 
 // Dato ................................................
 const dato = document.createElement('div');
