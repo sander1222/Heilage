@@ -92,11 +92,6 @@ main {
   min-height: 100px;
 }
 
-.ad {
-  width: 30px;
-  height: 30px;
-}
-
 /* Task Form Styling */
 #task-form {
   display: flex;
