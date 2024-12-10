@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heilage Håkons Ønskeliste</title>
-    <script src="main.js" defer></script>
+    <script defer src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,8 +21,13 @@
       <div class="left-side">left</div>
       <div class="middle">
         <form id="task-form">
-          <input type="text" name="user-input" id="user-input" />
-          <input type="submit" />
+          <input
+            type="text"
+            name="user-input"
+            id="user-input"
+            placeholder="Enter a task..."
+          />
+          <input type="submit" value="Add Task" />
         </form>
         <div id="menu">
           <label for="show-completed">Show Completed Tasks</label>
@@ -35,6 +40,7 @@
             <option value="alpha-desc">Alphabetically descending</option>
           </select>
         </div>
+        <div id="list-container"></div>
       </div>
       <div class="right-side">right</div>
     </main>
