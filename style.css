@@ -6,15 +6,43 @@ html {
   font-family: "Mountains of Christmas", serif;
 }
 
-/* img */
-#chrismas-tree {
-  position: absolute;
-  bottom: 10px;
-  right: -400px;
-  width: 488px;
-  height: 393.33px;
+/* img -----------------------------------------------------*/
+#chrismas-tree{
+  position:absolute;
+  bottom: 25px;
+  right: 110px;
+  width: 20%;
   z-index: -1;
 }
+/* Chrismas balls */
+.christmas-ball {
+  position: absolute;
+  width: 121.4px;
+  height: 102.85px;
+}
+#ball-top-left {
+  top: 0px;
+  left: 0px;
+}
+#ball-top-right {
+  top: 0px;
+  right: 0px;
+}
+#ball-bottom-left {
+  bottom:0px;
+  left: 0;
+}
+#ball-bottom-right {
+  bottom: 0px;
+  right: 0px;
+  z-index: -2;
+}
+/* /Chrismas balls */
+
+.left-side img, .right-side img {
+  width: 70%;
+}
+/* /img ----------------------------------------------------*/
 
 .container {
   display: grid;
@@ -39,7 +67,7 @@ html {
   margin: 0;
   text-align: center;
 }
-/* main */
+/* main container----------------------------------------------------------------------------------*/
 main {
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -48,45 +76,55 @@ main {
   height: 100%;
 }
 .middle {
-  background-color: beige;
+  background-color: #44B33A;
   width: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
-.left-side,
-.right-side {
-  background-color: azure;
+
+.left-side, .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: #F01313;
   width: auto;
+  padding: 20px 10px 10px 10px;
 }
 
-/* /main */
-
+/* /main container -------------------------------------------------------------------------------*/
+/* footer --------------------------------------------------------------------------------------- */
 .footer {
+  position: relative;
   background-color: #056700;
   width: auto;
   height: auto;
-  padding: 20px 0 20px 0;
+  padding: 10px 0 10px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   color: #f01313;
   font-size: 86px;
   z-index: 1;
 }
 
-.footer-left,
-.footer-right {
-  position: relative;
-  width: 400px;
+.footer-left {
+  width: fit-content;
   font-size: 20px;
   line-height: 1.5;
-  padding: 0;
+  padding: 0 10px 0 10px;
+}
+.footer-right {
+  width: 500px;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 0 10px 0 10px;
 }
 
-.footer-left p,
-.footer-right p {
+.footer-left p, .footer-right p {
   margin: 0;
+  padding: 0;
 }
+/* /footer -------------------------------------------------------------------------------------- */
 
 .Liste {
   background-color: #f01313;
@@ -289,50 +327,6 @@ main {
     flex: 0;
     margin: auto;
   }
-}
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Mountains of Christmas", serif;
-}
-
-.header {
-  background-color: #1cea0d;
-  height: 167px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-title {
-  color: #f01313;
-  font-size: 70px;
-  margin: 0;
-  text-align: center;
-}
-.footer {
-  background-color: #056700;
-  height: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  color: #f01313;
-  font-size: 86px;
-}
-
-.footer-left,
-.footer-right {
-  width: 48%;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.footer-left p,
-.footer-right p {
-  margin: 0;
 }
 
 .wishes {
