@@ -139,6 +139,7 @@ function saveStateToLocalStorage() {
   localStorage.setItem("showCompleted", showCompleted.checked);
   localStorage.setItem("sortBy", sortBy.value);
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const wishes = document.querySelectorAll(".wish");
 
