@@ -7,17 +7,16 @@ html {
 /* img -----------------------------------------------------*/
 #chrismas-tree{
   position:absolute;
-  bottom: 20px;
-  right: 75px;
-  width: 488px;
-  height: 393.33px;
+  bottom: 25px;
+  right: 110px;
+  width: 20%;
   z-index: -1;
 }
 /* Chrismas balls */
 .christmas-ball {
   position: absolute;
-  width: 170px;
-  height: 144px;
+  width: 121.4px;
+  height: 102.85px;
 }
 #ball-top-left {
   top: 0px;
@@ -37,9 +36,11 @@ html {
   z-index: -2;
 }
 /* /Chrismas balls */
+
 .left-side img, .right-side img {
   width: 70%;
 }
+
 /* /img ----------------------------------------------------*/
 
 .container {
