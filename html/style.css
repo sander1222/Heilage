@@ -67,18 +67,125 @@ html {
   margin: 0;
   text-align: center;
 }
-/* main */
+/* main ------------------------------------------------------------------------------*/
 main {
+  /* background-color: aqua; */
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  background-color: aqua;
   width: 100%;
   height: 100%;
 }
+/* middle contents ''''''''''''''''''''' */
 .middle {
+  position: relative;
   background-color: #44B33A;
+  display: flex;
+  justify-content: center;
   width: auto;
 }
+
+/* created from main.js ................*/
+/* lholdbox ''''''''''''''''''''''''' */
+.l-holdbox {
+  position: absolute;
+  position: relative;
+  width: 800px;
+  height: 310px;
+  border: 15px solid #056700;
+  background-color: white;
+  top: 25%;
+  left: center;
+
+  display: grid;
+  grid-template-columns: 40% auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+#tittel label, #innhold, #dato {
+  color: black;
+  font-size: 25px;
+}
+
+/* tittel */
+#tittel {
+  grid-column: 1;
+}
+#tittel-input {
+  margin: 0 0 0 10px;
+  width: 65%;
+  border: solid 1px;
+  font-size: 20px;
+}
+/* /tittel */
+
+#innhold {
+  /* background-color: #056700; */
+  grid-column: 2/3;
+}
+
+/* dato */
+#dato {
+  /* background-color: green; */
+  grid-column: 1/2;
+  grid-row: 2/20;
+}
+#dato-input {
+  margin: 0 0 0 16px;
+  width: 66.2%;
+  border: solid 1px;
+  font-size: 20px;
+}
+/* /dato */
+/* Edit & Delete button */
+.pop-button {
+  /* background-color: #F01313; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 20px;
+  grid-column: 6/6;
+  grid-row: 15/20;
+}
+#p-edit, #p-delete {
+  border: 1px solid transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 25px;
+  text-align: center;
+  width: 104px;
+  height: 53px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#p-edit {
+  background-color: #056700;
+}
+#p-edit:hover {
+  outline: none;
+  box-shadow: 0 0 5px rgba(5, 103, 0, 0.6);
+}
+#p-edit:active {
+  background-color: #0b5807;
+}
+
+#p-delete {
+  background-color: #F01313;
+}
+#p-delete:hover {
+  outline: none;
+  box-shadow: 0 0 5px rgba(240, 34, 34, 0.6);
+}
+#p-delete:active {
+  background-color: #cf0e0e;
+}
+
+/* /Edit & Delete button */
+/* /lholdbox '''''''''''''''''''''''' */
+/* /created from main.js ...............*/
+/* /middle contents '''''''''''''''''''' */
+
 .left-side, .right-side {
   display: flex;
   justify-content: center;
@@ -87,7 +194,7 @@ main {
   width: auto;
   padding: 20px 10px 10px 10px;
 }
-/* /main */
+/* /main -----------------------------------------------------------------------------*/
 
 .footer {
   position: relative;
