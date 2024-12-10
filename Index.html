@@ -19,7 +19,23 @@
     </header>
     <main>
       <div class="left-side">left</div>
-      <div class="middle">middle</div>
+      <div class="middle">
+        <form id="task-form">
+          <input type="text" name="user-input" id="user-input" />
+          <input type="submit" />
+        </form>
+        <div id="menu">
+          <label for="show-completed">Show Completed Tasks</label>
+          <input type="checkbox" name="show-completed" id="show-completed" />
+          <label for="sort-by">Sort by:</label>
+          <select name="sort-by" id="sort-by">
+            <option value="time-asc">Date added ascending</option>
+            <option value="time-desc">Date added descending</option>
+            <option value="alpha-asc">Alphabetically ascending</option>
+            <option value="alpha-desc">Alphabetically descending</option>
+          </select>
+        </div>
+      </div>
       <div class="right-side">right</div>
     </main>
     <footer class="footer">
