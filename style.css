@@ -50,6 +50,8 @@ main {
 .middle {
   background-color: beige;
   width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .left-side,
 .right-side {
@@ -176,7 +178,7 @@ main {
 #list-container {
   margin: 20px auto;
   padding: 10px;
-  width: 100%;
+  width: 8 0%;
   max-height: calc(100% - 200px);
   background-color: #fffaf0;
   border: 2px solid #f01313;
