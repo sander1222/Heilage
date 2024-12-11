@@ -11,7 +11,7 @@ showCompleted.checked = localStorage.getItem("showCompleted") === "true";
 sortBy.value = localStorage.getItem("sortBy") || "time-asc"; // Default to "time-asc"
 const storedWishes = localStorage.getItem("wishes");
 if (storedWishes) {
-  wishes = JSON.parse(storedwishes);
+  wishes = JSON.parse(storedWishes);
   renderList(wishes);
 }
 
