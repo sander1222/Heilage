@@ -1,4 +1,3 @@
-
 body,
 html {
   overflow-x: hidden;
@@ -8,8 +7,8 @@ html {
 }
 
 /* img -----------------------------------------------------*/
-#chrismas-tree{
-  position:absolute;
+#chrismas-tree {
+  position: absolute;
   bottom: 25px;
   right: 110px;
   width: 20%;
@@ -30,7 +29,7 @@ html {
   right: 0px;
 }
 #ball-bottom-left {
-  bottom:0px;
+  bottom: 0px;
   left: 0;
 }
 #ball-bottom-right {
@@ -40,7 +39,8 @@ html {
 }
 /* /Chrismas balls */
 
-.left-side img, .right-side img {
+.left-side img,
+.right-side img {
   width: 70%;
 }
 /* /img ----------------------------------------------------*/
@@ -55,19 +55,22 @@ html {
 
 .header {
   background-color: #1cea0d;
-  height: 167px;
+  height: auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 
 .header-title {
   color: #f01313;
   font-size: 70px;
-  margin: 0;
+  margin: 0 0 20px 0;
   text-align: center;
 }
+
 /* main container----------------------------------------------------------------------------------*/
 main {
   display: grid;
@@ -77,17 +80,18 @@ main {
   height: 100%;
 }
 .middle {
-  background-color: #44B33A;
+  background-color: #44b33a;
   width: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.left-side, .right-side {
+.left-side,
+.right-side {
   display: flex;
   justify-content: center;
   align-items: start;
-  background-color: #F01313;
+  background-color: #f01313;
   width: auto;
   padding: 20px 10px 10px 10px;
 }
@@ -121,7 +125,8 @@ main {
   padding: 0 10px 0 10px;
 }
 
-.footer-left p, .footer-right p {
+.footer-left p,
+.footer-right p {
   margin: 0;
   padding: 0;
 }
@@ -366,4 +371,21 @@ main {
 }
 .wish:active {
   background-color: #0c7508;
+}
+
+#nextPageButton {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#nextPageButton:hover {
+  background-color: #b22222;
+  transform: scale(1.1);
 }
