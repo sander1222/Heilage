@@ -133,8 +133,8 @@ main {
   min-height: 100px;
 }
 
-/* Task Form Styling */
-#task-form {
+/* Wish Form Styling */
+#wish-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +156,7 @@ main {
   outline: 2px solid #1cea0d;
 }
 
-#task-form input[type="submit"] {
+#wish-form input[type="submit"] {
   padding: 10px 20px;
   background-color: #1cea0d;
   border: none;
@@ -168,7 +168,7 @@ main {
   transition: background-color 0.3s;
 }
 
-#task-form input[type="submit"]:hover {
+#wish-form input[type="submit"]:hover {
   background-color: #13a30d;
 }
 
@@ -225,8 +225,8 @@ main {
   overflow-y: auto;
 }
 
-/* Task Container Styling */
-.task-container {
+/* Wish Container Styling */
+.wish-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -238,7 +238,7 @@ main {
   transition: background-color 0.3s;
 }
 
-.task-container:hover {
+.wish-container:hover {
   background-color: #fcdada;
 }
 
@@ -307,7 +307,7 @@ main {
     max-height: calc(100% - 300px);
   }
 
-  .task-container {
+  .wish-container {
     flex-wrap: wrap;
     gap: 10px;
   }
