@@ -1,14 +1,11 @@
+// JavaScript without 'Show Completed Wishes' and 'Sort by' functionality
 const wishForm = document.querySelector("#wish-form");
 const wishInput = document.querySelector("#user-input");
 const listContainer = document.querySelector("#list-container");
-const showCompleted = document.querySelector("#show-completed");
-const sortBy = document.querySelector("#sort-by");
 
 let wishes = [];
 
 // Load data from localStorage
-showCompleted.checked = localStorage.getItem("showCompleted") === "true";
-sortBy.value = localStorage.getItem("sortBy") || "time-asc"; // Default to "time-asc"
 const storedWishes = localStorage.getItem("wishes");
 if (storedWishes) {
   wishes = JSON.parse(storedWishes);
@@ -43,33 +40,12 @@ function showError(message) {
   closeModal.addEventListener("click", () => modal.close());
 }
 
-showCompleted.addEventListener("change", () => renderList(wishes));
-sortBy.addEventListener("change", () => renderList(wishes));
-
 function renderList(wishArr) {
   if (wishArr.length === 0) {
     localStorage.removeItem("wishes");
-    localStorage.removeItem("showCompleted");
-    localStorage.removeItem("sortBy");
   }
-  buildList(filterAndSort(wishArr));
+  buildList(wishArr);
   saveStateToLocalStorage();
-}
-
-function filterAndSort(arr) {
-  return arr
-    .filter((e) => (!showCompleted.checked ? !e.completed : true))
-    .sort((a, b) => {
-      if (sortBy.value === "time-asc") {
-        return new Date(a.timeStamp) - new Date(b.timeStamp);
-      } else if (sortBy.value === "time-desc") {
-        return new Date(b.timeStamp) - new Date(a.timeStamp);
-      } else if (sortBy.value === "alpha-asc") {
-        return a.description.localeCompare(b.description);
-      } else if (sortBy.value === "alpha-desc") {
-        return b.description.localeCompare(a.description);
-      }
-    });
 }
 
 function buildList(wishArr) {
@@ -102,7 +78,7 @@ function buildList(wishArr) {
     completedElem.checked = wish.completed;
     completedElem.addEventListener("change", () => {
       wishes[i].completed = completedElem.checked;
-      renderList(wishes);
+      saveStateToLocalStorage();
     });
 
     const editButton = document.createElement("button");
@@ -136,24 +112,4 @@ function buildList(wishArr) {
 
 function saveStateToLocalStorage() {
   localStorage.setItem("wishes", JSON.stringify(wishes));
-  localStorage.setItem("showCompleted", showCompleted.checked);
-  localStorage.setItem("sortBy", sortBy.value);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const wishes = document.querySelectorAll(".wish");
-
-  wishes.forEach((wish) => {
-    wish.addEventListener("click", () => {
-      if (!wish.classList.contains("chosen")) {
-        wish.classList.add("chosen");
-      }
-
-      // Extract data for wishlist
-      const wishData = {
-        heading: wish.querySelector(".wish-thing").textContent,
-        description: wish.querySelector(".wish-description").textContent,
-      };
-    });
-  });
-});
