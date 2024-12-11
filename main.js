@@ -1,34 +1,34 @@
-const taskForm = document.querySelector("#task-form");
-const taskInput = document.querySelector("#user-input");
+const wishForm = document.querySelector("#wish-form");
+const wishInput = document.querySelector("#user-input");
 const listContainer = document.querySelector("#list-container");
 const showCompleted = document.querySelector("#show-completed");
 const sortBy = document.querySelector("#sort-by");
 
-let tasks = [];
+let wishes = [];
 
 // Load data from localStorage
 showCompleted.checked = localStorage.getItem("showCompleted") === "true";
 sortBy.value = localStorage.getItem("sortBy") || "time-asc"; // Default to "time-asc"
-const storedTasks = localStorage.getItem("tasks");
-if (storedTasks) {
-  tasks = JSON.parse(storedTasks);
-  renderList(tasks);
+const storedwishes = localStorage.getItem("wishes");
+if (storedWishes) {
+  wishes = JSON.parse(storedWishes);
+  renderList(wishes);
 }
 
-taskForm.addEventListener("submit", (e) => {
+wishForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const formData = new FormData(taskForm);
+  const formData = new FormData(wishForm);
   if (!formData.get("user-input")) {
-    showError("You can't submit an empty task");
+    showError("You can't submit an empty wish");
     return;
   }
-  tasks.push({
+  wishes.push({
     timeStamp: new Date().toLocaleString("en-UK"),
     description: formData.get("user-input"),
     completed: false,
   });
-  taskInput.value = ""; // Clear input after submission
-  renderList(tasks);
+  wishInput.value = ""; // Clear input after submission
+  renderList(wishes);
 });
 
 function showError(message) {
@@ -43,16 +43,16 @@ function showError(message) {
   closeModal.addEventListener("click", () => modal.close());
 }
 
-showCompleted.addEventListener("change", () => renderList(tasks));
-sortBy.addEventListener("change", () => renderList(tasks));
+showCompleted.addEventListener("change", () => renderList(wishes));
+sortBy.addEventListener("change", () => renderList(wishes));
 
-function renderList(taskArr) {
-  if (taskArr.length === 0) {
-    localStorage.removeItem("tasks");
+function renderList(wishArr) {
+  if (wishArr.length === 0) {
+    localStorage.removeItem("wishes");
     localStorage.removeItem("showCompleted");
     localStorage.removeItem("sortBy");
   }
-  buildList(filterAndSort(taskArr));
+  buildList(filterAndSort(wishArr));
   saveStateToLocalStorage();
 }
 
@@ -72,37 +72,37 @@ function filterAndSort(arr) {
     });
 }
 
-function buildList(taskArr) {
+function buildList(wishArr) {
   while (listContainer.firstChild) {
     listContainer.firstChild.remove();
   }
 
-  if (taskArr.length === 0) {
+  if (wishArr.length === 0) {
     const emptyMessage = document.createElement("p");
-    emptyMessage.textContent = "No tasks to display.";
+    emptyMessage.textContent = "No wishes to display.";
     listContainer.append(emptyMessage);
     return;
   }
 
-  taskArr.forEach((task, i) => {
-    const taskContainer = document.createElement("div");
-    taskContainer.classList.add("task-container");
+  wishArr.forEach((wish, i) => {
+    const wishContainer = document.createElement("div");
+    wishContainer.classList.add("wish-container");
 
     const timeStampElem = document.createElement("p");
     timeStampElem.classList.add("timestamp");
-    timeStampElem.textContent = task.timeStamp;
+    timeStampElem.textContent = wish.timeStamp;
 
     const descriptionElem = document.createElement("input");
     descriptionElem.classList.add("description");
-    descriptionElem.value = task.description;
+    descriptionElem.value = wish.description;
     descriptionElem.readOnly = true;
 
     const completedElem = document.createElement("input");
     completedElem.type = "checkbox";
-    completedElem.checked = task.completed;
+    completedElem.checked = wish.completed;
     completedElem.addEventListener("change", () => {
-      tasks[i].completed = completedElem.checked;
-      renderList(tasks);
+      wishes[i].completed = completedElem.checked;
+      renderList(wishes);
     });
 
     const editButton = document.createElement("button");
@@ -111,7 +111,7 @@ function buildList(taskArr) {
     editButton.addEventListener("click", () => {
       descriptionElem.readOnly = !descriptionElem.readOnly;
       editButton.textContent = descriptionElem.readOnly ? "Edit" : "Save";
-      tasks[i].description = descriptionElem.value;
+      wishes[i].description = descriptionElem.value;
       saveStateToLocalStorage();
     });
 
@@ -119,26 +119,27 @@ function buildList(taskArr) {
     deleteButton.textContent = "Delete";
     deleteButton.classList.add("delete-button");
     deleteButton.addEventListener("click", () => {
-      tasks.splice(i, 1);
-      renderList(tasks);
+      wishes.splice(i, 1);
+      renderList(wishes);
     });
 
-    taskContainer.append(
+    wishContainer.append(
       timeStampElem,
       descriptionElem,
       completedElem,
       editButton,
       deleteButton
     );
-    listContainer.append(taskContainer);
+    listContainer.append(wishContainer);
   });
 }
 
 function saveStateToLocalStorage() {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("wishes", JSON.stringify(wishes));
   localStorage.setItem("showCompleted", showCompleted.checked);
   localStorage.setItem("sortBy", sortBy.value);
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const wishes = document.querySelectorAll(".wish");
 
