@@ -73,14 +73,6 @@ function buildList(wishArr) {
     descriptionElem.value = wish.description;
     descriptionElem.readOnly = true;
 
-    const completedElem = document.createElement("input");
-    completedElem.type = "checkbox";
-    completedElem.checked = wish.completed;
-    completedElem.addEventListener("change", () => {
-      wishes[i].completed = completedElem.checked;
-      saveStateToLocalStorage();
-    });
-
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
     editButton.classList.add("edit-button");
@@ -102,7 +94,6 @@ function buildList(wishArr) {
     wishContainer.append(
       timeStampElem,
       descriptionElem,
-      completedElem,
       editButton,
       deleteButton
     );
