@@ -281,6 +281,7 @@ main {
 .edit-button,
 .delete-button {
   padding: 5px 10px;
+  margin: 0 5px 0 5px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   color: white;
