@@ -15,24 +15,36 @@ html {
   z-index: -1;
 }
 /* Chrismas balls */
-.christmas-ball {
+.christmas-deco {
   position: absolute;
-  width: 121.4px;
-  height: 102.85px;
 }
-#ball-top-left {
+#deco-top-left {
+  width: max(8%, 121.4px);
+  min-height: 102.85px;
   top: 0px;
   left: 0px;
 }
-#ball-top-right {
+#deco-top-right {
+  width: max(15%, 121.4px);
+  min-height: 102.85px;
   top: 0px;
   right: 0px;
 }
-#ball-bottom-left {
+#deco-bottom-left {
+  width: 121.4px;
+  height: 102.85px;
   bottom: 0px;
   left: 0;
 }
-#ball-bottom-right {
+#deco-bottom-left2 {
+  width: max(10%, 121.4px);
+  min-height: 102.85px;
+  bottom: 0;
+  left: 200px;
+}
+#deco-bottom-right {
+  width: 121.4px;
+  height: 102.85px;
   bottom: 0px;
   right: 0px;
   z-index: -2;
