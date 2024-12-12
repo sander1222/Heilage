@@ -4,47 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart</title>
-    <link rel="stylesheet" href="style3.css" />
+    <link rel="stylesheet" href="./style3.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <audio id="background-music" loop>
       <source src="Audio/cafemusic.mp3" type="audio/mpeg" />
     </audio>
-    <div class="heading">
-      <h1>🛒 Your Shopping Cart 🛒</h1>
-      <p>
-        be <strong>Mindful</strong> Seeker of the unknown as your cart becomes a
-        treasure trove of eldritch delights their allure may unravel the threads
-        of your sanity!
-      </p>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="index2.html">Dinner</a></li>
-      </ul>
-    </div>
-    <div class="cart-container" id="cart-container">
-      <div id="cart-items"></div>
-      <div class="total">
-        <h3>Total: <span id="total-price">0</span>kr</h3>
-        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
-        <a href="index3.html" class="confirm-purchase hidden"
-          >Confirm Purchase</a
-        >
+    <div class="container">
+      <header>
+        <div>
+          <h1>🛒 Your Shopping Cart 🛒</h1>
+          <p>
+            be <strong>Mindful</strong> Seeker of the unknown as your cart becomes a
+            treasure trove of eldritch delights their allure may unravel the threads
+            of your sanity!
+          </p>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="index2.html">Dinner</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div id="cart-container">
+          <div id="cart-items"></div>
+          <div class="total">
+            <h3>Total: <span id="total-price">0</span>kr</h3>
+            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+            <a href="index3.html" class="confirm-purchase hidden"
+              >Confirm Purchase</a
+            >
+          </div>
+        </div>
+      </main>
+      <div class="left">
+
       </div>
+      <div class="right">
+
+      </div>
+      <footer class="footer">
+        <div>
+          <p>
+          If you have any questions, feedback, or inquiries, feel free to reach
+          out!
+        </p>
+        <p>Email: hotmail@lovelylovecraftcafe.com</p>
+        <p>Phone: +776942069420</p>
+        <p>Address: 420 Eldritch Lane, Innsmouth, Araara Leng</p>
+        </div>
+      </footer>
     </div>
-    <footer class="footer1">
-      <p>
-        If you have any questions, feedback, or inquiries, feel free to reach
-        out!
-      </p>
-      <p>Email: hotmail@lovelylovecraftcafe.com</p>
-      <p>Phone: +776942069420</p>
-      <p>Address: 420 Eldritch Lane, Innsmouth, Araara Leng</p>
-    </footer>
   </body>
 </html>

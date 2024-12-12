@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Page container -------------------------------------------------*/
+
+.container {
+    /* background-color: beige; */
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'head head head'
+    'left center right'
+    'foot foot foot'
+    ;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 15% 1fr 15%;
+    overflow-x: hidden;
+}
+
+/* /Page container ------------------------------------------------*/
+
+/* BACKGROUND COLORS HERE ARE CURRENTLY ONLY USE FOR AREA-MEASUREMENT ONLY, AND CAN BE CHANGED TO ANY DESIRE ONES AT ANYTIME */
+
+/* header ---------------------------------------------------------*/
+
+header {
+    background-color: aqua;
+    grid-area: head;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div {
+    /* background-color: bisque; */
+    display: flex;
+    flex-flow: column wrap;
+    width: fit-content;
+    padding: 15px;
+}
+header div h1 {
+    padding: 15px 0 0 0;
+}
+header div p {
+    margin: 10px 0 10px 0;
+}
+/* navbar ''''''''''''''''''''*/
+header div ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+header div ul li {
+    margin: 10px 0 10px 0;
+    padding: 0 0 10px 0;
+}
+/* /navbar '''''''''''''''''''*/
+
+/* /header --------------------------------------------------------*/
+/* main -----------------------------------------------------------*/
+
+main {
+    background-color: greenyellow;
+    grid-area: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card '''''''''''''''''''''''*/
+#cart-container {
+    background-color: chocolate;
+    border: 1px solid black;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: column wrap;
+}
+#cart-items {
+    /* background-color: azure; */
+    padding:  10px;
+
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.cart-item {
+    /* background-color: blue; */
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+   
+}
+.cart-item button {
+    width: fit-content;
+    margin: 0 0 0 30px;
+}
+
+.total {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'text text'
+    'clear-cart confirm'
+    ;
+    gap: 10px 30px;
+}
+.total h3 {
+    grid-area: text;
+}
+.clear-cart {
+    grid-area: clear-cart;
+}
+.total a {
+    grid-area: confirm;
+}
+/* /Card ''''''''''''''''''''''*/
+
+/* /main ----------------------------------------------------------*/
+/* left */
+
+.left {
+    background-color: red;
+    grid-area: left;
+}
+
+/* /left */
+/* right */
+
+.right {
+    background-color: blue;
+    grid-area: right;
+}
+
+/* /right */
+/* foot */
+
+footer {
+    background-color: gray;
+    grid-area: foot;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* /foot */

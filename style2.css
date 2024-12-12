@@ -12,16 +12,20 @@ body {
 .container {
   /* background-color: blue; */
   display: grid;
-  grid-template-rows: auto auto 18%;
+  grid-template-areas: 
+  'head head head'
+  'left center right'
+  'foot foot foot';
   width: 100vw;
   height: 100vh;
 }
 /* Head */
 .heading {
+  grid-area: head;
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 10px 0px;
-  width: 100%;
+  width: 100vw;
   height: auto;
   padding: 20px 0 20px 0;
   background-color: pink;
@@ -132,35 +136,43 @@ ul li::after {
   flex-direction: column;
   align-items: center;
 }
-.footer {
-  background-color: pink;
-  color: red;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  border-top: 1px red solid;
-}
-/* center area */
-.menu-list {
-  display: grid;
-  grid-template-columns: auto 70% auto;
-}
+
+/* left area */
 .left-bar {
+  background-color: pink;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: red;
+  width: max(15vw, 200px);
+  grid-area: left;
   margin: 0;
 }
+/* /left area */
+
+/* center area */
+.menu-list {
+  width: auto;
+  grid-area: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .content-container {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 .content-area {
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .menu {
-  width: fit-content;
-  height: 120px;
+  width: 30%;
+  height: 110px;
   min-height: fit-content;
   background-color: pink;
   border: 2px solid red;
@@ -177,6 +189,34 @@ ul li::after {
   transform: scale(1.02);
 }
 /* /center area */
+/* right area */
+.right-bar {
+  background-color: pink;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: red;
+  width: max(15vw, 200px);
+  grid-area: right;
+  margin: 0;
+}
+/* /right area */
+/* footer */
+.footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: pink;
+  color: red;
+  border-top: 1px red solid;
+  padding: 0;
+}
+
+.footer div {
+  padding: 20px;
+}
+/* /footer */
 h3 {
   color: red;
   text-align: center;
