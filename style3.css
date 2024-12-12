@@ -23,9 +23,27 @@
 
 /* BACKGROUND COLORS HERE ARE CURRENTLY ONLY USE FOR AREA-MEASUREMENT ONLY, AND CAN BE CHANGED TO ANY DESIRE ONES AT ANYTIME */
 
+/* Images ---------------------------------------------------------*/
+
+header div img {
+    position: absolute;
+    aspect-ratio: 1/1; /* <<<--- remove this line if needing to maintain original image size ratio */
+    width: 5%;
+}
+#img-top-left {
+    top: 0;
+    left: 0;
+}
+#img-top-right {
+    top: 0;
+    right: 0;
+}
+
+/* /Images --------------------------------------------------------*/
 /* header ---------------------------------------------------------*/
 
 header {
+    position: relative;
     background-color: aqua;
     grid-area: head;
     text-align: center;
