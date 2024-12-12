@@ -4,10 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Credit Card Details</title>
-    <link rel="stylesheet" href="styles.css" />
     <script defer src="main.js"></script>
+    <style>
+      #addacardsite {
+        font-family: Arial, sans-serif;
+        background-color: #1cea0d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .card-form {
+        background: rgb(223, 13, 13);
+        padding: 20px; /* Default padding for all sides */
+        padding-right: 40px; /* Increased padding for the right */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      .card-form h2 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-group input:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+      .form-group .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      .subbutton {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #1cea0d;
+      }
+      .christmas-lights {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 1000;
+        padding: 10px 0;
+      }
+
+      .light {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        border-radius: 50%;
+        animation: blink 1.5s infinite;
+      }
+
+      .red {
+        background-color: red;
+        animation-delay: 0.2s;
+      }
+
+      .green {
+        background-color: green;
+        animation-delay: 0.4s;
+      }
+
+      .blue {
+        background-color: blue;
+        animation-delay: 0.6s;
+      }
+
+      .yellow {
+        background-color: yellow;
+        animation-delay: 0.8s;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
-  <body id="bodyhtml3">
+  <body id="addacardsite">
     <form class="card-form" id="creditCardForm">
       <h2>Enter Card Details</h2>
       <div class="form-group">
@@ -46,7 +156,49 @@
           required
         />
       </div>
-      <a href="Index.html"><button type="submit">Submit</button></a>
+      <a href="Index.html" class="subbutton">Submit</a>
     </form>
+    <div class="christmas-lights">
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+      <div class="light red"></div>
+      <div class="light green"></div>
+      <div class="light blue"></div>
+      <div class="light yellow"></div>
+    </div>
   </body>
 </html>
