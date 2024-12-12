@@ -19,12 +19,14 @@ html {
   position: absolute;
 }
 #deco-top-left {
-  width: 8%;
+  width: max(8%, 121.4px);
+  min-height: 102.85px;
   top: 0px;
   left: 0px;
 }
 #deco-top-right {
-  width: 15%;
+  width: max(15%, 121.4px);
+  min-height: 102.85px;
   top: 0px;
   right: 0px;
 }
@@ -33,6 +35,12 @@ html {
   height: 102.85px;
   bottom: 0px;
   left: 0;
+}
+#deco-bottom-left2 {
+  width: max(10%, 121.4px);
+  min-height: 102.85px;
+  bottom: 0;
+  left: 200px;
 }
 #deco-bottom-right {
   width: 121.4px;
