@@ -3,61 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Populære Ønsker</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <title>Våre Ønsker</title>
+    <link rel="stylesheet" href="style2.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mountains+of+Christmas:wght@400;700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js"></script>
   </head>
   <body>
-    <header class="header">
-      <h1 class="header-title">Populære Ønsker</h1>
-     <a href="Index.html"><button id="nextPageButton">Tilbake til listen</button></a
-      > </a>
-    </header>
+    <audio id="background-music" loop>
+      <source src="Audio/cafemusic.mp3" type="audio/mpeg" />
+    </audio>
+    <a href="cart.html">
+      <img src="images/cart.webp" class="cart-icon" />
+    </a>
+    <div class="heading">
+      <h1>❤️<strong>Dessert Menu</strong>❤️</h1>
+      <p>
+        Satisfy your cravings for the unknown with our Desserts, Each delicacy
+        is a tantalizing creation, infused with mysterious flavors that beckon
+        you into the abyss of sweetness, guaranteed to leave you spellbound and
+        yearning for more!
+      </p>
+      <ul>
+        <li><a href="index.html">Start </a></li>
+        <li><a href="meny1.html">Dinner</a></li>
+        <li><a href="meny2.html">Dessert </a></li>
+        <li><a href="meny3.html">Drinks </a></li>
+      </ul>
+    </div>
+    <div class="menu-list">
+      <div
+        class="menu"
+        id="Sukkerfri-Redbull-355ml-fra-Bunnpris"
+        data-price="31"
+        onclick="addToCart('Sukkerfri-Redbull-355ml-fra-Bunnpris', 31)"
+      >
+        <h3>Sukkerfri Redbull 355ml fra Bunnpris 31krkr</h3>
+        <p>En God Tørste Drikk for en tørst Håkon</p>
       </div>
-      <div class="wishes">
-        <div class="wish">
-          <div class="wish-thing" id="Sukkerfri-Redbull-355ml-fra-Bunnpris" onclick="addToWishlist('Sukkerfri-Redbull-355ml-fra-Bunnpris')">Sukkerfri Redbull 355ml fra Bunnpris</div>
-          <div class="wish-description">En god tørste drikk for en tørst Håkon</div>
-        </div>
-        <div class="wish">
-          <div class="wish-thing">Kebabrester fra gulvet på kodehode</div>
-          <div class="wish-description">Aluminumsfolie rester og støvkaniner inkludert</div>
-        </div>
-        <div class="wish">
-          <div class="wish-thing">Kjøkkenmøbler</div>
-          <div class="wish-description">Kan definitivt ikke brukes til andre ting</div>
-        </div>
-            <div class="wish">
-          <div class="wish-thing">Ulti Gaming Ultra Kaffe</div>
-          <div class="wish-description">Kan <B>kun</B> hentes imens Håkon underviser</div>
-        </div>
-           <div class="wish">
-          <div class="wish-thing">"The T-skjorte"</div>
-          <div class="wish-description">Trenger ingen beskrivelse den er legendarisk</div>
-        </div>
+      <div
+        class="menu"
+        id="Kebabrester-fra-gulvet-på-kodehode"
+        data-price="200"
+        onclick="addToCart('Kebabrester-fra-gulvet-på-kodehode', 200)"
+      >
+        <h3>Kebabrester fra gulvet på kodehode 200kr</h3>
+        <p>Aluminumsfolie rester og støvkaniner inkludert</p>
       </div>
-     <footer class="footer">
-      <div class="footer-left">
-        <p>
-          Glorious Leader: Benjamin Naustvoll<br />
-          The Grand Architect of Figma: Mathias Bronnes<br />
-          The Code Keeper of Github: Sander Knutshaug<br />
-          The Debugging Sage: Suriya Suntiviraporn<br />
-          The Innovator Extraordinaire: Gabriel A. Skarsvåg
-        </p>
+      <div
+        class="menu"
+        id="Kjøkkenmøbler"
+        data-price="3500"
+        onclick="addToCart('Kjøkkenmøbler', 3500)"
+      >
+        <h3>Kjøkkenmøbler 3500kr</h3>
+        <p>Kan definitivt ikke brukes til noe annet</p>
       </div>
-      <div class="footer-right">
-        <p>
-          Vi har ikke ansvar for innhold på eksterne nettsider som det lenkes
-          til. Kopiering av vårt materiale for bruk annet sted, crawling,
-          skraping, indeksering (for eksempel tekst og datamining) er ikke
-          tillatt uten avtale.
-        </p>
+      <div
+        class="menu"
+        id="Ulti-Gaming-Ultra-Kaffe"
+        data-price="1"
+        onclick="addToCart('Ulti-Gaming-Ultra-Kaffe', 1)"
+      >
+        <h3>Ulti Gaming Ultra Kaffe 1kr</h3>
+        <p>kan <b>kun</b> hentes imens Håkon underviser</p>
       </div>
+      <div
+        class="menu"
+        id="The-Tskjorte"
+        data-price="1500000"
+        onclick="addToCart('The-Tskjorte', 1500000)"
+      >
+        <h3>The T-skjorte 1500000kr</h3>
+        <p>Trenger ingen beskrivelse den er legendarisk</p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>
+        If you have any questions, feedback, or inquiries, feel free to reach
+        out!
+      </p>
+      <p>Email: hotmail@lovelylovecraftcafe.com</p>
+      <p>Phone:+776942069420</p>
+      <p>Address: 420 Eldritch Lane, Innsmouth, Araara Leng</p>
     </footer>
   </body>
 </html>
