@@ -133,9 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 function addToWishlist(wishDescription) {
   wishes.push({
-    timeStamp: new Date().toLocaleString("en-UK"),
     description: wishDescription,
-    completed: false,
   });
   renderList(wishes);
 }
