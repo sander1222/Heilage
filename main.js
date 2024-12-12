@@ -122,12 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-function addToWishlist(wishDescription) {
-  wishes.push({
-    description: wishDescription,
-  });
-  renderList(wishes);
-}
 
 document
   .getElementById("creditCardForm")
