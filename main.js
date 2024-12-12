@@ -128,3 +128,24 @@ function addToWishlist(wishDescription) {
   });
   renderList(wishes);
 }
+
+document
+  .getElementById("creditCardForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Simple validation for demonstration
+    const cardNumber = document.getElementById("cardNumber").value;
+    const cardNumberError = document.getElementById("cardNumberError");
+
+    if (!/^[0-9]{16}$/.test(cardNumber.replace(/\s+/g, ""))) {
+      cardNumberError.textContent =
+        "Please enter a valid 16-digit card number.";
+      return;
+    } else {
+      cardNumberError.textContent = "";
+    }
+
+    alert("Form submitted successfully!");
+    // Further processing can go here
+  });
