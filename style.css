@@ -9,6 +9,7 @@ html {
 /* img -----------------------------------------------------*/
 #chrismas-tree {
   position: absolute;
+  pointer-events: none;
   bottom: 25px;
   right: 110px;
   width: 20%;
@@ -398,6 +399,7 @@ main {
 }
 
 #nextPageButton:hover {
+  cursor: pointer;
   background-color: #b22222;
   transform: scale(1.1);
 }
