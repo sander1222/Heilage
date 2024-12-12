@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./image/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mountains+of+Christmas:wght@400;700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -24,6 +25,7 @@
     <main>
       <div class="left-side">
         <img src="./image/sander play.png" />
+        <img src="./image/example.png" />
       </div>
       <div class="middle">
         <form id="wish-form">
@@ -35,17 +37,6 @@
           />
           <input type="submit" value="Add Wish" />
         </form>
-        <div id="menu">
-          <label for="show-completed">Show Completed Wishes</label>
-          <input type="checkbox" name="show-completed" id="show-completed" />
-          <label for="sort-by">Sort by:</label>
-          <select name="sort-by" id="sort-by">
-            <option value="time-asc">Date added ascending</option>
-            <option value="time-desc">Date added descending</option>
-            <option value="alpha-asc">Alphabetically ascending</option>
-            <option value="alpha-desc">Alphabetically descending</option>
-          </select>
-        </div>
         <div id="list-container"></div>
       </div>
       <div class="right-side">
