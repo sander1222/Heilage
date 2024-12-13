@@ -150,6 +150,7 @@ main {
     width: fit-content;
     margin: 0 0 0 30px;
     padding: 8px;
+    cursor: pointer;
 }
 
 .total {
@@ -171,7 +172,7 @@ main {
     width: 150px;
     justify-self: center;
     padding: 5px;
-
+    cursor: pointer;
 }
 
 .total a {
