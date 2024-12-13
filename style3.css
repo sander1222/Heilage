@@ -139,6 +139,7 @@ main {
     'text text'
     'clear-cart confirm'
     ;
+    grid-template-columns: 50% 50%;
     gap: 10px 30px;
 }
 .total h3 {
@@ -148,6 +149,7 @@ main {
 .clear-cart {
     grid-area: clear-cart;
 }
+
 .total a {
     color: inherit;
     grid-area: confirm;
