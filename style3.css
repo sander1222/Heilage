@@ -43,8 +43,8 @@ header div img {
 /* header ---------------------------------------------------------*/
 
 header {
+    background-color: #1CEA0D;
     position: relative;
-    background-color: aqua;
     grid-area: head;
     text-align: center;
 
@@ -83,7 +83,7 @@ header div ul li {
 /* main -----------------------------------------------------------*/
 
 main {
-    background-color: greenyellow;
+    background-color: #44B33A;
     grid-area: center;
     display: flex;
     justify-content: center;
@@ -133,12 +133,14 @@ main {
 }
 .total h3 {
     grid-area: text;
+    padding: 0 0 0 28px;
 }
 .clear-cart {
     grid-area: clear-cart;
 }
 .total a {
     grid-area: confirm;
+    text-align: center;
 }
 /* /Card ''''''''''''''''''''''*/
 
@@ -146,7 +148,7 @@ main {
 /* left */
 
 .left {
-    background-color: red;
+    background-color: #44B33A;
     grid-area: left;
 }
 
@@ -154,7 +156,7 @@ main {
 /* right */
 
 .right {
-    background-color: blue;
+    background-color: #44B33A;
     grid-area: right;
 }
 
@@ -162,7 +164,7 @@ main {
 /* foot */
 
 footer {
-    background-color: gray;
+    background-color: #056700;
     grid-area: foot;
     text-align: center;
 
