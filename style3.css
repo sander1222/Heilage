@@ -76,25 +76,29 @@ header div ul {
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 20px 0 20px 0;
+    
 }
 
 header div ul li {
-    background-color: rgb(255,0,0);
-    color: black;
-    width: 100px;
     list-style-type: none;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 5px gray, 0 0 10px ;
 }
 header div ul li a {
+    background-color: rgb(255,0,0);
+    box-shadow: 0 0 5px gray, 0 0 10px;
+    border-radius: 5px;
+    width: 100px;
+    padding: 8px 17px 8px 17px;
+
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-size: larger;
     font-weight: 500;
-    
 }
+header div ul li a:hover {
+    background-color: rgb(255,0,0, 0.8);
+}
+
 /* /navbar '''''''''''''''''''*/
 
 /* /header --------------------------------------------------------*/
@@ -128,6 +132,9 @@ main {
     font-size: larger;
     color: white;
     
+}
+#cart-items div {
+    padding: 0 0 0 12px;
 }
 .cart-item {
     /* background-color: blue; */
