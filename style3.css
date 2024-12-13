@@ -26,15 +26,18 @@
 /* Images ---------------------------------------------------------*/
 
 header div img {
-    position: absolute;
-    aspect-ratio: 1/1; /* <<<--- remove this line if needing to maintain original image size ratio */
+    position: fixed;
     width: 5%;
 }
 #img-top-left {
+    width: max(8%, 121.4px);
+     min-height: 102.85px;
     top: 0;
     left: 0;
 }
 #img-top-right {
+    width: max(15%, 121.4px);
+    min-height: 102.85px;
     top: 0;
     right: 0;
 }
@@ -43,8 +46,8 @@ header div img {
 /* header ---------------------------------------------------------*/
 
 header {
+    background-color: #1CEA0D;
     position: relative;
-    background-color: aqua;
     grid-area: head;
     text-align: center;
 
@@ -67,15 +70,23 @@ header div p {
 }
 /* navbar ''''''''''''''''''''*/
 header div ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    /* background-color: aqua; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 header div ul li {
-    margin: 10px 0 10px 0;
-    padding: 0 0 10px 0;
+    color: black;
+    width: fit-content;
+    list-style-type: none;
+    /* border: 1px black solid;
+    border-radius: 5px; */
+    padding: 5px;
+}
+header div ul li a {
+    color: inherit;
+    text-decoration: none;
 }
 /* /navbar '''''''''''''''''''*/
 
@@ -83,7 +94,7 @@ header div ul li {
 /* main -----------------------------------------------------------*/
 
 main {
-    background-color: greenyellow;
+    background-color: #44B33A;
     grid-area: center;
     display: flex;
     justify-content: center;
@@ -92,7 +103,7 @@ main {
 
 /* Card '''''''''''''''''''''''*/
 #cart-container {
-    background-color: chocolate;
+    background-color: red;
     border: 1px solid black;
     padding: 10px;
 
@@ -102,7 +113,6 @@ main {
 #cart-items {
     /* background-color: azure; */
     padding:  10px;
-
     display: flex;
     flex-flow: column wrap;
     
@@ -133,12 +143,16 @@ main {
 }
 .total h3 {
     grid-area: text;
+    padding: 0 0 0 28px;
 }
 .clear-cart {
     grid-area: clear-cart;
 }
 .total a {
+    color: inherit;
     grid-area: confirm;
+    text-align: center;
+    text-decoration: none;
 }
 /* /Card ''''''''''''''''''''''*/
 
@@ -146,7 +160,7 @@ main {
 /* left */
 
 .left {
-    background-color: red;
+    background-color: #44B33A;
     grid-area: left;
 }
 
@@ -154,7 +168,7 @@ main {
 /* right */
 
 .right {
-    background-color: blue;
+    background-color: #44B33A;
     grid-area: right;
 }
 
@@ -162,7 +176,7 @@ main {
 /* foot */
 
 footer {
-    background-color: gray;
+    background-color: #056700;
     grid-area: foot;
     text-align: center;
 
