@@ -74,6 +74,7 @@ header div ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin: 20px 0 0 0;
 }
 
 header div ul li {
@@ -83,6 +84,7 @@ header div ul li {
     /* border: 1px black solid;
     border-radius: 5px; */
     padding: 5px;
+    
 }
 header div ul li a {
     color: inherit;
@@ -98,17 +100,21 @@ main {
     grid-area: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding: 10px;
 }
 
 /* Card '''''''''''''''''''''''*/
 #cart-container {
     background-color: red;
-    border: 1px solid black;
+    box-shadow: 0 0 10px red, 0 0 20px rgb(5,103,0);
+    /* border: 1px solid black; */
     padding: 10px;
-
+    
     display: flex;
     flex-flow: column wrap;
+    width: 100%;
+    margin: 20px 0 0 0;
 }
 #cart-items {
     /* background-color: azure; */
@@ -140,7 +146,6 @@ main {
     'clear-cart confirm'
     ;
     grid-template-columns: 50% 50%;
-    gap: 10px 30px;
 }
 .total h3 {
     grid-area: text;
@@ -148,14 +153,22 @@ main {
 }
 .clear-cart {
     grid-area: clear-cart;
+    width: 150px;
+    justify-self: center;
+    padding: 5px;
+
 }
 
 .total a {
     color: inherit;
     grid-area: confirm;
     text-align: center;
+    justify-self: center;
     text-decoration: none;
+    padding: 5px;
+    width: 150px;
 }
+
 /* /Card ''''''''''''''''''''''*/
 
 /* /main ----------------------------------------------------------*/
