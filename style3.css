@@ -61,6 +61,7 @@ header div {
     flex-flow: column wrap;
     width: fit-content;
     padding: 15px;
+    margin: 20px 0 20px 0;
 }
 header div h1 {
     padding: 15px 0 0 0;
@@ -74,21 +75,25 @@ header div ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
 }
 
 header div ul li {
+    background-color: rgb(255,0,0);
     color: black;
-    width: fit-content;
+    width: 100px;
     list-style-type: none;
-    /* border: 1px black solid;
-    border-radius: 5px; */
-    padding: 5px;
-    
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px gray, 0 0 10px ;
 }
 header div ul li a {
-    color: inherit;
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 500;
+    
 }
 /* /navbar '''''''''''''''''''*/
 
@@ -106,7 +111,7 @@ main {
 
 /* Card '''''''''''''''''''''''*/
 #cart-container {
-    background-color: red;
+    background-color: rgba(255, 0, 0);
     box-shadow: 0 0 10px red, 0 0 20px rgb(5,103,0);
     /* border: 1px solid black; */
     padding: 10px;
@@ -118,15 +123,16 @@ main {
 }
 #cart-items {
     /* background-color: azure; */
-    padding:  10px;
     display: flex;
     flex-flow: column wrap;
+    font-size: larger;
+    color: white;
     
 }
 .cart-item {
     /* background-color: blue; */
     margin: 10px;
-    padding: 10px;
+    padding: 3px;
 
     display: flex;
     justify-content:space-between;
@@ -136,6 +142,7 @@ main {
 .cart-item button {
     width: fit-content;
     margin: 0 0 0 30px;
+    padding: 8px;
 }
 
 .total {
@@ -149,7 +156,8 @@ main {
 }
 .total h3 {
     grid-area: text;
-    padding: 0 0 0 28px;
+    padding: 5px 0 5px 12px;
+    color: white;
 }
 .clear-cart {
     grid-area: clear-cart;
@@ -167,6 +175,12 @@ main {
     text-decoration: none;
     padding: 5px;
     width: 150px;
+
+    background-color: #1CEA0D;
+    border-radius: 2px;
+}
+.total a:hover {
+    background-color: #056700;
 }
 
 /* /Card ''''''''''''''''''''''*/
