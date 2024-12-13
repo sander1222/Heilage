@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #001f3f, #0074d9);
+  color: white;
+  text-align: center;
+}
+
+.game-container {
+  margin: auto;
+  padding: 20px;
+  max-width: 800px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.instructions {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  background-size: cover;
+}
+
+.restart-button {
+  display: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #ff4136;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px #85144b;
+}
+
+.restart-button:hover {
+  background: #85144b;
+}
+
+.restart-button:active {
+  box-shadow: 0 2px #85144b;
+  transform: translateY(2px);
+}

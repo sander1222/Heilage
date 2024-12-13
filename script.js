@@ -76,3 +76,10 @@ if (document.body.id === "indexPage") {
   }
   greetingElement.innerHTML = greeting;
 }
+function playAudio() {
+  const audio = new Audio("audio/cancer.mp3");
+  audio.play();
+  document.removeEventListener("click", playAudio);
+}
+document.addEventListener("click", playAudio);
+
