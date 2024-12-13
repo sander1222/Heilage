@@ -23,15 +23,15 @@ const maze = [
   [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1],
   [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1],
-  [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
 // Initial player and enemies setup
 let player = { x: 1, y: 1, speed: 1 };
 let enemies = [
-  { x: 7.5, y: 7.5, dx: 1, dy: 0, speed: 0.05 },
-  { x: 5.5, y: 5.5, dx: 0, dy: 1, speed: 0.05 },
-  { x: 3.5, y: 9.5, dx: -1, dy: 0, speed: 0.05 },
+  { x: 7, y: 7, dx: 1, dy: 0, speed: 0.05 },
+  { x: 7, y: 6, dx: 1, dy: 0.5, speed: 0.05 },
+  { x: 3, y: 9, dx: -1, dy: 0, speed: 0.05 },
 ];
 
 // Exit goal
@@ -64,14 +64,14 @@ function draw() {
 
   // Draw the exit (🎁)
   ctx.font = "30px sans-serif";
-  ctx.fillText("🎁", exit.x * cellSize + 10, exit.y * cellSize + 30);
+  ctx.fillText("🎁", exit.x * cellSize + -3, exit.y * cellSize + 30);
 
   // Draw the player (🎅)
-  ctx.fillText("🎅", player.x * cellSize + 10, player.y * cellSize + 30);
+  ctx.fillText("🎅", player.x * cellSize + -3, player.y * cellSize + 30);
 
   // Draw the enemies (🧑‍🎄)
   enemies.forEach((enemy) => {
-    ctx.fillText("🧑‍🎄", enemy.x * cellSize + 10, enemy.y * cellSize + 30);
+    ctx.fillText("🧑‍🎄", enemy.x * cellSize + -20, enemy.y * cellSize + 30);
   });
 }
 
@@ -95,7 +95,8 @@ function update() {
 
   // Check if player reached exit
   if (Math.abs(player.x - exit.x) < 0.5 && Math.abs(player.y - exit.y) < 0.5) {
-    document.getElementById("message").textContent = "You win! 🎁";
+    document.getElementById("message").textContent =
+      "You win! Take a cookie! 🎁";
     restartButton.style.display = "inline-block";
     gameActive = false;
   }
@@ -147,9 +148,9 @@ document.addEventListener("keyup", (event) => {
 restartButton.addEventListener("click", () => {
   player = { x: 1, y: 1, speed: 1 };
   enemies = [
-    { x: 7.5, y: 7.5, dx: 1, dy: 0, speed: 0.05 },
-    { x: 5.5, y: 5.5, dx: 0, dy: 1, speed: 0.05 },
-    { x: 3.5, y: 9.5, dx: -1, dy: 0, speed: 0.05 },
+    { x: 7, y: 7, dx: 1, dy: 0, speed: 0.05 },
+    { x: 5, y: 5, dx: 0, dy: 1, speed: 0.05 },
+    { x: 3, y: 9, dx: -1, dy: 0, speed: 0.05 },
   ];
   gameActive = true;
   restartButton.style.display = "none";

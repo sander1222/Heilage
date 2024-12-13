@@ -11,39 +11,45 @@ html {
   position: absolute;
   pointer-events: none;
   bottom: 25px;
-  right: 110px;
-  width: 20%;
+  right: 270px;
+  width: 17%;
   z-index: -1;
 }
 /* Chrismas balls */
 .christmas-deco {
   position: absolute;
+  margin: 0;
 }
 #deco-top-left {
+  
   width: max(8%, 121.4px);
   min-height: 102.85px;
   top: 0px;
   left: 0px;
 }
 #deco-top-right {
+  
   width: max(15%, 121.4px);
   min-height: 102.85px;
   top: 0px;
   right: 0px;
 }
 #deco-bottom-left {
+  
   width: 121.4px;
   height: 102.85px;
   bottom: 0px;
   left: 0;
 }
 #deco-bottom-left2 {
+  
   width: max(10%, 121.4px);
   min-height: 102.85px;
   bottom: 0;
   left: 7%;
 }
 #deco-bottom-right {
+
   width: 121.4px;
   height: 102.85px;
   bottom: 0px;
@@ -67,6 +73,7 @@ html {
 }
 
 .header {
+  position: relative;
   background-color: #1cea0d;
   height: auto;
   width: 100%;
@@ -115,8 +122,7 @@ main {
 .footer {
   position: relative;
   background-color: #056700;
-  width: auto;
-  height: auto;
+  width: 100vw;
   padding: 10px 0 10px 0;
   display: flex;
   justify-content: center;
