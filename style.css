@@ -8,7 +8,6 @@ html {
 
 /* img -----------------------------------------------------*/
 #chrismas-tree {
-  position: absolute;
   pointer-events: none;
   bottom: 25px;
   right: 110px;
@@ -20,30 +19,35 @@ html {
   position: absolute;
 }
 #deco-top-left {
+  position: fixed;
   width: max(8%, 121.4px);
   min-height: 102.85px;
   top: 0px;
   left: 0px;
 }
 #deco-top-right {
+  position: fixed;
   width: max(15%, 121.4px);
   min-height: 102.85px;
   top: 0px;
   right: 0px;
 }
 #deco-bottom-left {
+  position: absolute;
   width: 121.4px;
   height: 102.85px;
   bottom: 0px;
   left: 0;
 }
 #deco-bottom-left2 {
+  position: absolute;
   width: max(10%, 121.4px);
   min-height: 102.85px;
   bottom: 0;
   left: 200px;
 }
 #deco-bottom-right {
+  position: absolute;
   width: 121.4px;
   height: 102.85px;
   bottom: 0px;
