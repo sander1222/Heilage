@@ -143,3 +143,9 @@ document
     alert("Form submitted successfully!");
     // Further processing can go here
   });
+function playAudio() {
+  const audio = new Audio("audio/cancer.mp3");
+  audio.play();
+  document.removeEventListener("click", playAudio);
+}
+document.addEventListener("click", playAudio);
