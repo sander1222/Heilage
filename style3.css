@@ -26,7 +26,7 @@
 /* Images ---------------------------------------------------------*/
 
 header div img {
-    position: fixed;
+    position: absolute;
     width: 5%;
 }
 #img-top-left {

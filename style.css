@@ -16,17 +16,17 @@ html {
 }
 /* Chrismas balls */
 .christmas-deco {
-  position: absolute;
+  margin: 0;
 }
 #deco-top-left {
-  position: fixed;
+  position: absolute;
   width: max(8%, 121.4px);
   min-height: 102.85px;
   top: 0px;
   left: 0px;
 }
 #deco-top-right {
-  position: fixed;
+  position: absolute;
   width: max(15%, 121.4px);
   min-height: 102.85px;
   top: 0px;
@@ -71,6 +71,7 @@ html {
 }
 
 .header {
+  position: relative;
   background-color: #1cea0d;
   height: auto;
   width: 100%;
