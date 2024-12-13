@@ -61,3 +61,20 @@ canvas {
   box-shadow: 0 2px #85144b;
   transform: translateY(2px);
 }
+
+#nextPageButton {
+  background-color: rgb(0, 127, 185);
+  color: rgb(191, 235, 255);
+  height: 50px;
+  width: 250px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: larger;
+  margin: 10px;
+}
+
+#nextPageButton:hover {
+  cursor: pointer;
+  background-color: #b22222;
+  transform: scale(1.1);
+}
