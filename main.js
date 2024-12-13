@@ -1,4 +1,3 @@
-// JavaScript without 'Show Completed Wishes' and 'Sort by' functionality
 const wishForm = document.querySelector("#wish-form");
 const wishInput = document.querySelector("#user-input");
 const listContainer = document.querySelector("#list-container");
