@@ -4,18 +4,18 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Pacifico", cursive;
+  font-family: "Mountains of Christmas", serif;
   overflow-x: hidden;
-  background-color: #89cff0;
+  background-color: #1cea0d;
 }
 
 .container {
   /* background-color: blue; */
   display: grid;
-  grid-template-areas: 
-  'head head head'
-  'left center right'
-  'foot foot foot';
+  grid-template-areas:
+    "head head head"
+    "left center right"
+    "foot foot foot";
   width: 100vw;
   height: 100vh;
 }
@@ -28,8 +28,7 @@ body {
   width: 100vw;
   height: auto;
   padding: 20px 0 20px 0;
-  background-color: pink;
-  border-bottom: 1px solid red;
+  background-color: #056700;
 }
 /* /Head */
 h1 {
@@ -48,7 +47,7 @@ ul {
   justify-content: center;
 }
 ul li {
- margin: 0;
+  margin: 0;
 }
 
 ul li a {
@@ -66,65 +65,6 @@ ul li a {
   height: auto;
   margin-top: 20px;
 }
-.cthulu {
-  width: 350px;
-  height: auto;
-  position: relative;
-  border: 2px solid red;
-  border-radius: 10px;
-}
-.dagon {
-  width: 350px;
-  height: auto;
-  position: relative;
-  border: 2px solid red;
-  border-radius: 10px;
-}
-ul li:hover::after {
-  content: "❤️";
-  position: absolute;
-  right: -5px;
-  top: 0;
-  font-size: 16px;
-  transform: scale(1);
-  transition: 0.25s ease-in-out;
-}
-ul li::after {
-  content: "";
-  position: absolute;
-  right: -5px;
-  top: 10;
-  font-size: 16px;
-  transform: scale(0);
-  transition: 0.25s ease-in-out;
-}
-.main-text {
-  width: 70%;
-  max-width: 700px;
-  margin: 5px auto;
-  padding: 5px;
-  background-color: pink;
-  border: 2px solid red;
-  border-radius: 10px;
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  color: red;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.main-text1 {
-  width: 70%;
-  max-width: 700px;
-  margin: 5px auto;
-  padding: 5px;
-  background-color: pink;
-  border: 2px solid red;
-  border-radius: 10px;
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  color: red;
-  position: relative;
-}
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -139,10 +79,7 @@ ul li::after {
 
 /* left area */
 .left-bar {
-  background-color: pink;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: red;
+  background-color: #44b33a;
   width: max(15vw, 200px);
   grid-area: left;
   margin: 0;
@@ -156,7 +93,6 @@ ul li::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .content-container {
   /* background-color: antiquewhite; */
@@ -178,7 +114,7 @@ ul li::after {
   border: 2px solid red;
   border-radius: 10px;
   padding: 20px;
-  font-family: "Pacifico", cursive;
+  font-family: "Mountains of Christmas", serif;
   color: red;
   text-align: center;
   margin: 20px;
@@ -191,10 +127,7 @@ ul li::after {
 /* /center area */
 /* right area */
 .right-bar {
-  background-color: pink;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: red;
+  background-color: #44b33a;
   width: max(15vw, 200px);
   grid-area: right;
   margin: 0;
@@ -207,9 +140,8 @@ ul li::after {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: pink;
+  background-color: #056700;
   color: red;
-  border-top: 1px red solid;
   padding: 0;
 }
 
@@ -220,90 +152,10 @@ ul li::after {
 h3 {
   color: red;
   text-align: center;
-  font-family: "Pacifico", cursive;
+  font-family: "Mountains of Christmas", serif;
   margin: 5px;
 }
 .hidden {
   text-decoration: none;
   color: red;
-}
-.cart-icon {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  width: 45px;
-  height: 45px;
-  z-index: 1000;
-}
-.cart-icon:hover {
-  opacity: 0.75;
-}
-.cart-container {
-  display: flex;
-  color: red;
-  flex-direction: column;
-  background-color: pink;
-  border: 2px solid red;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 400px;
-  z-index: 10;
-  max-height: 335px;
-  overflow-y: auto;
-}
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid red;
-  color: red;
-  margin-top: 20px;
-  padding: 10px 20px;
-}
-
-.remove-item {
-  background-color: pink;
-  color: red;
-  border: none;
-  border-radius: 3px;
-}
-.remove-item:hover {
-  background-color: rgba(139, 0, 0, 0.8);
-  transform: scale(1.02);
-}
-.clear-cart {
-  background-color: red;
-  color: pink;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 10px 20px;
-  text-align: center;
-}
-.clear-cart:hover {
-  background-color: rgba(139, 0, 0, 0.8);
-  transform: scale(1.02);
-}
-.builder {
-  width: 300px;
-  border: 2px solid red;
-  border-radius: 10px;
-}
-.confirm-purchase {
-  background: red;
-  color: white;
-  border-radius: 10px;
-}
-.confirm-purchase:hover {
-  background-color: rgba(139, 0, 0, 0.8);
-  transform: scale(1.02);
-}
-.greeting {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
 }
